@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/resume.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <div id = "logo">
+            <img src="assets/images/logoIcon.png" alt="">
+            <div> Resume <span> Builder </span></div>
+        </div>
+    </header>
+    
+    <div class="empty"></div>
+
+    <div class = "sectionHolder">
+        <!-- About -->
+        <div class = "section about">
+            <h1 class = "titles">About Section</h1>
+            <div class="container">
+                <div class="column2">
+                    <div class="inputBlock"> 
+                        <label for = "firstName">First Name</label>
+                        <input id = "firstName" type = "text" onkeyup="generateCV()">
+                    </div>
+                    <div class="inputBlock">
+                        <label for = "lastName">Last Name</label>
+                        <input id = "lastName" type = "text" onkeyup="generateCV()">
+                    </div>
+                </div>
+                <div class="column2">
+                    <div class="inputBlock"> 
+                        <h2>Phone Number</h2>
+                        <input type = "text">
+                    </div>
+                    <div class="inputBlock">
+                        <h2>Email</h2>
+                        <input type = "text">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class = "section">
+            <h1 class = "titles">Career Objective</h1>
+            <div class="container">
+                <div class = "objective">
+                    <div class="column1">
+                        <div class="inputBlock"> 
+                            <h2>summary</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- achievemnets -->
+        <div class = "section">
+            <h1 class = "titles">Achievements</h1>
+            <div class="container">
+                <div class = "acheivment">
+                    <button class = ".removeBtn" onclick="this.parentElement.remove()">remove</button>
+                    <div class = "column2"> 
+                        <div class="inputBlock"> 
+                            <h2>title</h2>
+                            <input type = "text">
+                        </div>
+                        <div class="inputBlock">
+                            <h2>desc</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
+        </div>
+
+        <!-- Projects -->
+        <div class = "section">
+            <h1 class = "titles">projects</h1>
+            <div class="container">
+                <div class = "project">
+                    <button class = ".removeBtn" onclick="this.parentElement.remove()">remove</button>
+                    <div class = "column2"> 
+                        <div class="inputBlock"> 
+                            <h2>Name</h2>
+                            <input type = "text">
+                        </div>
+                        <div class="inputBlock">
+                            <h2>desc</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
+        </div>
+        
+        <!-- work XP -->
+        <div class = "section">
+            <h1 class = "titles">Work Experience</h1>
+            <div class="container">
+                <div class = "workExp">
+                    <button class = ".removeBtn" onclick="this.parentElement.remove()">remove</button>
+                    <div class="column2">
+                        <div class="inputBlock"> 
+                            <h2>title</h2>
+                            <input type = "text">
+                        </div>
+                        <div class="inputBlock">
+                            <h2>Company</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="inputBlock"> 
+                            <h2>from</h2>
+                            <input type = "text">
+                        </div>
+                        <div class="inputBlock">
+                            <h2>to</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                    <div class="column1">
+                        <div class="inputBlock">
+                            <h2>Decs</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
+        </div>
+        
+        <!-- edu -->
+        <div class = "section">
+            <h1 class = "titles">Education</h1>
+            <div class="container">
+                <div class = "education">
+                    <button class = ".removeBtn" onclick="this.parentElement.remove()">remove</button>
+                    <div class="column2">
+                        <div class="inputBlock"> 
+                            <h2>Course</h2>
+                            <input type = "text">
+                        </div>
+                        <div class="inputBlock">
+                            <h2>Institute</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
+        </div>
+
+        <!-- Skills -->
+        <div class = "section">
+            <h1 class = "titles">Skills</h1>
+            <div class="container">
+                <div class = "skill">
+                    <button class = ".removeBtn" onclick="this.parentElement.remove()">remove</button>
+                    <div class="column1">
+                        <div class="inputBlock"> 
+                            <h2>Skills</h2>
+                            <input type = "text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class = "addNew" onclick = "addDiv()">+</button>
+        </div>
+
+    </div>
+
+    <div class="empty"></div>
+    
+    <div class = "cv">
+        <div class="container">
+            <h1 id = "name">firstName lastName</h1>
+            <p>Web Developer</p>
+            
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>Email: your.email@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Website: www.yourwebsite.com</p>
+            </div>
+            
+            <div class="education">
+                <h2>Education</h2>
+                <p><strong>University Name</strong>, Bachelor's Degree in Computer Science, 20XX</p>
+            </div>
+
+            <div class="experience">
+                <h2>Experience</h2>
+                <p><strong>Company Name</strong>, Web Developer, 20XX-20XX</p>
+                <p> - Developed and maintained websites</p>
+                <p> - Collaborated with cross-functional teams</p>
+            </div>
+
+            <div class="projects">
+                <h2>Projects</h2>
+                <p><strong>Project 1 Name</strong></p>
+                <p> - Description of Project 1</p>
+                <p><strong>Project 2 Name</strong></p>
+                <p> - Description of Project 2</p>
+            </div>
+
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body> 
+</html>

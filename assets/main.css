@@ -1,0 +1,279 @@
+p, img, div, ul ,h1, h3,li, body{
+    padding: 0;
+    margin: 0;
+    font-family:'Calibri';
+}
+
+img {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* header */
+header{
+    padding-bottom: 20px ;
+    width: 100%;
+    box-shadow: grey 0px 0px 6px;
+}
+
+#logo{
+    display: inline;
+    width: 200px;
+    margin-left: 20px;
+}
+
+#logo > img {
+    position: relative;
+    top: 12px;
+}
+
+#logo div{
+    display: inline;
+    padding-top: 7px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#logo img {
+    display: inline;
+    width: 40px;
+    height: 40px;
+}
+#logo div span{
+    color: #1d99c3;
+}
+
+#navbar{
+    padding-top: 8px;
+    font-size: 1.4rem;
+    max-width:790px;
+    float: right;
+}
+
+#toggleButton{
+    display: none;
+}
+
+#navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 790px;
+    margin-top: 10px;
+    }
+
+#navbar li {
+    padding: 2px 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+#navbar li:hover {
+    cursor: pointer;
+    color: rgb(132, 175, 255);    
+}
+
+@media (max-width : 650px) {
+    #navbar{
+        height: 40px;
+        width: 40px;
+    }
+    
+    #toggleButton{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #navbar ul{
+        display: none;
+    }
+}
+
+/* section 0 */
+#mainText{
+    background-color: #bfddde;
+}
+
+.description{
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+.description > h1{
+    font-size: 3rem;
+}
+
+.description > p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+@media (max-width : 995px){
+    .description > h1{
+        font-size: 2rem;
+    }
+    .description > p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.2rem;
+        padding-bottom: 1.6rem;
+    }
+}
+@media (max-width : 480px){
+    .description > h1{
+        font-size: 1.5rem;
+    }
+    .description > p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 0.9rem;
+        padding-bottom: 1.6rem;
+    }
+}
+
+@media (max-width : 350px){
+    .description > h1{
+        font-size: 1.2rem;
+    }
+    .description > p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 0.6rem;
+        padding-bottom: 1.6rem;
+    }
+}
+
+.description > a{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #1d99c3;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 1.4rem 1.6rem;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.25s;
+}
+.description > a:hover{
+    color: black;
+    border: 1px solid black;
+    background-color: #bfddde;
+}
+
+.description > img{
+    padding: 0;
+    margin: 0 auto;
+    max-width: 760px;
+    border-radius: 8px 8px 0 0;
+    margin-top: 3.2rem;
+}
+
+/* section 1*/
+
+.section1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem 0 4rem 0;
+}
+
+.section1 .image{
+    max-width: 545px;
+}
+
+.text{
+    box-sizing: border-box;
+    max-width: 545px;
+    padding: 1rem;
+}
+
+.text > h1{
+    font-size: 3rem;
+}
+
+.text > p {
+    font-size: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+@media (max-width : 995px){
+    .text > h1{
+        font-size: 2rem;
+    }
+    
+    .text > p {
+        font-size: 1.2rem;
+        padding-bottom: 1.6rem;
+    }
+}
+@media (max-width : 480px){
+    .text > h1{
+        font-size: 1.5rem;
+    }
+    
+    .text > p {
+        font-size: 0.9rem;
+        padding-bottom: 1.6rem;
+    }
+}
+
+@media (max-width : 350px){
+    .text > h1{
+        font-size: 1.2rem;
+    }
+    
+    .text > p {
+        font-size: 0.6rem;
+        padding-bottom: 1.6rem;
+    }
+}
+
+.text > a{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #1d99c3;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 1.4rem 1.6rem;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.25s;
+}
+.text > a:hover{
+    color: black;
+    border: 1px solid black;
+    background-color: #bfddde;
+}
+
+/* section 2 */
+
+.section2{
+    background-color: #bfddde;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    margin: 2rem;
+    padding: 1rem;
+    width: 350px;
+    text-align: center;
+}
+
+/* footer */
+footer{
+    padding-top: 2rem;
+    height: 5rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}

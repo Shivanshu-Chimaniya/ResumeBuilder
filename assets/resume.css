@@ -1,0 +1,188 @@
+/* #FBF7F4 */
+/* #222725 */
+/* #E8998D */
+/* #EED2CC */
+
+body{
+    background-color: #f5f5f2;
+}
+
+p, img, div, ul ,h1,h2, h3,li, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* header */
+header{
+    padding-bottom: 20px ;
+    width: 100%;
+    box-shadow: grey 0px 0px 6px;
+}
+
+#logo{
+    display: inline;
+    width: 200px;
+    margin-left: 20px;
+}
+
+#logo > img {
+    position: relative;
+    top: 12px;
+}
+
+#logo div{
+    display: inline;
+    padding-top: 7px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#logo img {
+    display: inline;
+    width: 40px;
+    height: 40px;
+}
+
+#logo div span{
+    color: #1d99c3;
+}
+
+
+.empty{
+    height: 75px;
+}
+
+.sectionHolder{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+.titles{
+    padding: 2px;
+    padding-left:10px;
+    margin-bottom: 20px;
+    background-color: #222725;
+    color: #f7f7f2;
+    font-weight: 600;
+}
+
+.section{
+    margin-bottom: 20px;
+}
+
+.container{
+    margin-top: 5px;
+    padding: 1rem;
+    border: solid grey 1px;
+}
+
+label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.container>div:first-of-type > button{
+    display: none;
+}
+
+.column1, .column2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.inputBlock {
+    flex-grow: 1;
+    margin: 3px;
+    padding: 1rem;
+    height: 100px;
+}
+.inputBlock > label{
+    padding-bottom: 1rem;
+}
+
+.inputBlock > input {
+    background-color: inherit;
+    font-size: 1.2rem;
+    width: 80%;
+    height: 30px;
+}
+
+.column1 > .inputBlock{
+    width: 500px;
+}
+
+.column2 > .inputBlock {
+    width: 300px;
+}
+
+.btn{
+    margin: 12px;
+}
+
+.cv body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.cv .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv h1 {
+    color: #333;
+}
+
+.cv h2 {
+    color: #555;
+}
+
+.cv p {
+    color: #777;
+}
+
+.cv .contact {
+    margin-top: 20px;
+}
+
+.cv .contact p {
+    margin: 5px 0;
+}
+
+.cv .education, .experience, .projects {
+    margin: 20px 0;
+}
+
+.cv .education h2, .experience h2, .projects h2 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.cv .skills {
+    margin: 20px 0;
+}
+
+.cv .skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cv .skills li {
+    margin-bottom: 5px;
+}
