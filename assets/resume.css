@@ -129,60 +129,92 @@ label{
     margin: 12px;
 }
 
-.cv body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
+/* CV */
+.cv * {
+    background-color: #fff;
+    color: #596060;
 }
-
 .cv .container {
     max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
+    margin: 0 auto; 
+    padding: 0;
+    padding-top: 2rem;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.cv h1 {
-    color: #333;
+.cv .blockItem{
+    padding:2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.cv .jobTitle{
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .cv h2 {
+    background-color: #c2d5d1;
+    padding: 0.2rem 0rem;
     color: #555;
+    text-align: center;
 }
 
 .cv p {
-    color: #777;
+    font-size: 1rem;
+    text-align: center;
 }
 
-.cv .contact {
-    margin-top: 20px;
+.cv .contacts{
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
 }
 
-.cv .contact p {
-    margin: 5px 0;
+.cv .contacts>.info{
+    padding: 0rem 1rem;
+    display: inline;
 }
 
-.cv .education, .experience, .projects {
-    margin: 20px 0;
+
+.cv ul {
+    padding-left: 1rem;
+    text-align: left;
 }
 
-.cv .education h2, .experience h2, .projects h2 {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-}
-
-.cv .skills {
-    margin: 20px 0;
-}
-
-.cv .skills ul {
+.cv li{
     list-style: none;
-    padding: 0;
 }
 
-.cv .skills li {
-    margin-bottom: 5px;
+.cv li::before {
+    content: "";
+    display: inline-block;
+    height: 14px;
+    width: 16px;
+    margin-right: 8px;
+    background-image: url(images/resumeListIcon1.png);
+    background-size: 1.05rem;
+}
+
+.cv h3{
+    padding: 0.2rem 0rem;
+    color: #555;
+    text-align: left;
+}
+.cv .project{
+    text-align: left;
+    padding-left: 2rem;
+}
+
+@media print{
+    .sectionHolder, header, .empty, .printButton{
+        display:none;
+    }
+    .cv .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 }
