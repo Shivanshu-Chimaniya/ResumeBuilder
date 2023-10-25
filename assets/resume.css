@@ -6,13 +6,13 @@
 /* #F79256 */
 
 body{
-    background-color: #FBF7F4;
+    background-color: #f8f7ff;
 }
 
-p, img, div, ul ,h1,h2, h3,li, body{
-    padding: 0;
+* {
     margin: 0;
-    font-family: 'Roboto Slab', sans-serif;
+    padding: 0;
+    font-family: 'Roboto Slab','Calibri','sans-serif';
 }
 
 img {
@@ -22,38 +22,42 @@ img {
 }
 
 /* header */
-header{
-    padding-bottom: 20px ;
-    width: 100%;
-    box-shadow: grey 0px 0px 6px;
+
+/* header */
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    text-decoration: none;
 }
 
-#logo{
-    display: inline;
-    width: 200px;
-    margin-left: 20px;
+header {
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 30px 2%;
+}
+.logo {
+    width: 18%;
+    cursor: pointer;
+    margin-right: auto;
+}
+        
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block; 
+    padding: 0px 20px;
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
 }
 
-#logo > img {
-    position: relative;
-    top: 12px;
-}
-
-#logo div{
-    display: inline;
-    padding-top: 7px;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-#logo img {
-    display: inline;
-    width: 40px;
-    height: 40px;
-}
-
-#logo div span{
-    color: #1d99c3;
+.nav_links li a:hover {
+    color: #0088a9
 }
 
 
@@ -233,7 +237,7 @@ button{
 
 .cv h3{
     padding: 0.2rem 0rem;
-    color: #555;
+    color: #596060;
     text-align: left;
 }
 .cv .project{
@@ -251,4 +255,14 @@ button{
         height: 100%;
         border: none;
     }
+}
+
+/* footer */
+footer{
+    padding-top: 2rem;
+    height: 5rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }

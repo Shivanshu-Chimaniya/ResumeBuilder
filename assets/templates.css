@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Calibri','sans-serif';
+}
+
+
+/* header */
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #24252A;
+    text-decoration: none;
+}
+
+header { 
+    background-color: white;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 30px 2%;
+}
+
+.logo {
+    width: 18%;
+    cursor: pointer;
+    margin-right: auto;
+}
+        
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block; 
+    padding: 0px 20px;
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9
+}
+
+.empty{
+    height: 75px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.background{
+    width: 100%;
+    background-color: #f8f7ff;
+}
+
+.block{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.ChooseTemplate{
+    padding: 3rem 0rem;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.cardHolder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: #3E6680;
+    height: 400px;
+    width: 300px;   
+    margin: 2rem 1rem;
+    border-radius: 2%;
+    transition: all 0.25s ease;
+}
+
+.card:hover{
+    box-shadow: black 1px 1px 8px
+    ;
+}
+
+.imageHolder{
+    padding: 2rem;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.resumeImage{
+    width: 100%;
+    border-radius: 2%;
+}
+
+.text{
+    color: white;
+    text-align: center;
+}
+
+.text h3{
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+/* footer */
+footer{
+    padding-top: 2rem;
+    height: 5rem;
+    background-color: #1C1D21;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
