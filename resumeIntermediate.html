@@ -88,23 +88,43 @@
             </div>
         </div>
 
-        <!-- Skills -->
-        <div class = "section">
-            <h1 class = "titles">Skills</h1>
+         <!-- work XP -->
+         <div class = "section">
+            <h1 class = "titles">Work Experience</h1>
             <div class="container">
-                <div class = "skill">
+                <div class = "workExp weElem">
                     <button class = "removeBtn" onclick="this.parentElement.remove()">X</button>
+                    <div class="column2">
+                        <div class="inputBlock"> 
+                            <label>Job&nbsp;Tilte</label>
+                            <input class = "jobTitle" type = "text" onkeyup="generateCV()">
+                        </div>
+                        <div class="inputBlock"> 
+                            <label>Company</label>
+                            <input class = "companyName" type = "text" onkeyup="generateCV()">
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="inputBlock"> 
+                            <label>Start&nbsp;Date</label>
+                            <input class = "startDate" type = "month" onkeyup="generateCV()">
+                        </div>
+                        <div class="inputBlock"> 
+                            <label>End&nbsp;Date</label>
+                            <input class = "endDate" type = "month" onkeyup="generateCV()">
+                        </div>
+                    </div>
                     <div class="column1">
-                        <div class="inputBlock">  
-                            <label>Skill</label>
-                            <input class = "skillElem" type = "text" onkeyup="generateCV()">
+                        <div class="inputBlock"> 
+                            <label>Description</label>
+                            <input class = "desc" type = "text" onkeyup="generateCV()">
                         </div>
                     </div>
                 </div>
             </div>
             <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
         </div>
-
+   
         <!-- Projects -->
         <div class = "section">
             <h1 class = "titles">projects</h1>
@@ -147,6 +167,23 @@
             <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
         </div>
 
+        <!-- Skills -->
+        <div class = "section">
+            <h1 class = "titles">Skills</h1>
+            <div class="container">
+                <div class = "skill">
+                    <button class = "removeBtn" onclick="this.parentElement.remove()">X</button>
+                    <div class="column1">
+                        <div class="inputBlock">  
+                            <label>Skill</label>
+                            <input class = "skillElem" type = "text" onkeyup="generateCV()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
+        </div>
+
         <!-- achievemnets -->
         <div class = "section">
             <h1 class = "titles">Achievements</h1>
@@ -163,82 +200,7 @@
             </div>
             <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
         </div>
-
-        <!-- Languages -->
-        <div class = "section">
-            <h1 class = "titles">Languages</h1>
-            <div class="container">
-                <div class = "languages">
-                    <button class = "removeBtn" onclick="this.parentElement.remove()">X</button>
-                    <div class = "column1"> 
-                        <div class="inputBlock"> 
-                            <label>Language</label>
-                            <input class = "languageElem" type = "text" onkeyup="generateCV()">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
-        </div>
-
-        <!-- achievemnets -->
-        <!-- <div class = "section">
-            <h1 class = "titles">Achievements</h1>
-            <div class="container">
-                <div class = "acheivment">
-                    <button class = "removeBtn" onclick="this.parentElement.remove()">-</button>
-                    <div class = "column2"> 
-                        <div class="inputBlock"> 
-                            <label>Tilte</label>
-                            <input class = "achTitle" type = "text" onkeyup="generateCV()">
-                        </div>
-                        <div class="inputBlock"> 
-                            <label>Description</label>
-                            <input class = "achDesc" type = "text" onkeyup="generateCV()">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
-        </div> -->
-
-        <!-- work XP -->
-        <div class = "section">
-            <h1 class = "titles">Work Experience</h1>
-            <div class="container">
-                <div class = "workExp">
-                    <button class = "removeBtn" onclick="this.parentElement.remove()">-</button>
-                    <div class="column2">
-                        <div class="inputBlock"> 
-                            <label>Job&nbsp;Tilte</label>
-                            <input class = "achDesc" type = "text" onkeyup="generateCV()">
-                        </div>
-                        <div class="inputBlock"> 
-                            <label>Company</label>
-                            <input class = "achDesc" type = "text" onkeyup="generateCV()">
-                        </div>
-                    </div>
-                    <div class="column2">
-                        <div class="inputBlock"> 
-                            <label>Start&nbsp;Date</label>
-                            <input class = "startDate" type = "month" onkeyup="generateCV()">
-                        </div>
-                        <div class="inputBlock"> 
-                            <label>End&nbsp;Date</label>
-                            <input class = "endDate" type = "month" onkeyup="generateCV()">
-                        </div>
-                    </div>
-                    <div class="column1">
-                        <div class="inputBlock"> 
-                            <label>Description</label>
-                            <input class = "achDesc" type = "text" onkeyup="generateCV()">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class = "addNew" onclick = "addDiv(this)">+</button>
-        </div>
-    </div>
+    </div>   
 
     <div class="empty"></div>
     
@@ -252,54 +214,61 @@
         <div class="container">
             <div class = "block">
                 <div class="blockItem">
-                    <h1 id = "nameDisplay" class = "name">firstName lastName</h1>
+                    <h1 id = "nameDisplay" class = "name">FirstName LastName</h1>
                     <div class = "contacts">
                         <div class="info">
-                            <p id = "placeDisplay">Ujjain, MP</p>
+                            <p id = "placeDisplay">City, State</p>
                         </div>
                         <div class="info">
                             <p id = "emailDisplay">Example@site.com</p>
                        </div>
                         <div class="info">
-                            <p id = "phoneDisplay">123 456 7890</p>
+                            <p id = "phoneDisplay">0123456789</p>
                        </div>
                     </div>
-                    <p id = "jobTitle">Web Developer</p>
+                    <p id = "jobTitle">Job Title</p>
                 </div>  
             </div>
 
             <div class = "block">
-                <h2> Work Experience </h2>
-                <div class = "blockItem" id = "WEDisplay">
-                    <h3>Front end Developer, TCS</h3>
-                    <p class = "project">(2023-01 - 2023-07)</p>
-                    <p class = "project">Implemented key features and ensured a bug-free product.Collaborated with a team for feedback and continuous improvements.</p>
+                <h2> PROFESSIONAL SUMMARY </h2>
+                <div class = "blockItem">
+                    <p id = "summaryDisplay"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nemo provident molestias nostrum rem dolor quis! Quas et ratione nisi repellendus, natus ex est eius voluptates in nihil tenetur assumenda.</p>
                 </div>
             </div>
             
             <div class = "block">
-                <h2> RELEVENT PROJECTS </h2>
+                <h2> WORK EXPERIENCE</h2>
+                <div class = "blockItem" id = "weDisplay">
+                    <h3>Job Title, Company Name : (StartDate - EndDate)</h3>
+                    <p class = "project">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi vitae dolorem animi officia at quidem nihil atque architecto sed ipsum!</p>
+                </div>
+            </div>
+            
+            <div class = "block">
+                <h2>PROJECTS </h2>
                 <div class = "blockItem" id = "projectDisplay">
-                    <h3>Online Resume Builder</h3>
-                    <p class = "project">Implemented key features and ensured a bug-free product.Collaborated with a team for feedback and continuous improvements.</p>
+                    <h3>Project 1</h3>
+                    <p class = "project">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur optio fugiat voluptate beatae nesciunt quas.</p>
+                    <h3>Project 2</h3>
+                    <p class = "project">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus eos facilis voluptates iste ullam, mollitia quod expedita!</p>
                 </div>
             </div>
 
             <div class = "block">
                 <h2> EDUCATION </h2>
                 <div class = "blockItem"  id = "educationDisplay">
-                    <h3>Ujjain Engineering College</h3>
-                    <p class = "project">Bachelor of Engineering - Computer Science Engineering</p>
+                    <h3>Institute 1</h3>
+                    <p class = "project">Course</p>
                 </div>
             </div>
-
 
             <div class = "block">
                 <h2> SKILLS </h2>
                 <div class = "blockItem">
                     <ul id = "skillDisplay">
-                        <li>Java, C++, Python programming skills.</li>
-                        <li>Data structures ans algorithms.</li>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
                     </ul>
                 </div>
             </div>
@@ -308,20 +277,26 @@
                 <h2> ACHIEVEMENTS </h2>
                 <div class = "blockItem">
                     <ul id = "achievementDisplay">
-                        <li>Solved 100+ questions on LeetCode.</li>
+                        <li>Achievement 1</li>
+                        <li>Achievement 2</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="empty"></div>
+
     <div class="buttonCenter" style = " width: 100%; display: flex; justify-content: center; ">
         <button class = "printButton" onclick="printCV()"> PRINT CV </button>
     </div>
+
     <div class="empty"></div>
+
     <footer>
         <p> &copy;Copyright 2023 </p>
     </footer>
+
     <script src="assets/appIntermidiate.js"></script>
 </body> 
 </html>

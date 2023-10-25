@@ -30,7 +30,9 @@ let nameDisplayElement = resume.querySelector('#nameDisplay'),
     projectDisplayElement = resume.querySelector('#projectDisplay'),
     educationDisplayElement = resume.querySelector('#educationDisplay'),
     achievementDisplayElement = resume.querySelector('#achievementDisplay'),
-    languageDisplayElement = resume.querySelector('#languageDisplay');
+    // languageDisplayElement = resume.querySelector('#languageDisplay'),
+    weDisplayElement = resume.querySelector("#weDisplay");
+    console.dir(weDisplayElement);
 
 
 function getData(){
@@ -38,7 +40,8 @@ function getData(){
         projectList = mainForm.querySelectorAll(".projectElem"),
         educationList = mainForm.querySelectorAll(".educationElem"),
         achievementList = mainForm.querySelectorAll(".achievementElem"),
-        languageList = mainForm.querySelectorAll(".languageElem");
+        // languageList = mainForm.querySelectorAll(".languageElem"),
+        weList = mainForm.querySelectorAll(".weElem");
   
     return {
         name: firstNameElement.value + " " + lastNameElement.value,
@@ -51,7 +54,8 @@ function getData(){
         projects: arrangeDataInDiffWay(projectList),
         educations: arrangeDataInDiffWay(educationList),
         achievements : arrangeDataInList(achievementList),
-        languages : arrangeDataInList(languageList)
+        // languages : arrangeDataInList(languageList),
+        wes: arrangeDataInStrangeWay(weList)
     }
 }
 
@@ -66,7 +70,9 @@ function showData(userData){
     projectDisplayElement.innerHTML = userData.projects;
     educationDisplayElement.innerHTML = userData.educations;
     achievementDisplayElement.innerHTML = userData.achievements;
-    languageDisplayElement.innerHTML = userData.languages;
+    // languageDisplayElement.innerHTML = userData.languages;
+    console.dir(weDisplayElement);
+    weDisplayElement.innerHTML = userData.wes;
 }
 
 function arrangeDataInList(dataList){
@@ -82,6 +88,14 @@ function arrangeDataInDiffWay(dataList){
     let str = "";
     for(i=0; i < dataList.length; i++){
         str += "<h3>" + (dataList[i].querySelector(".title")).value + "</h3>";
+        str += "<p class = 'project'>" + (dataList[i].querySelector(".desc")).value + "</p>";
+    }
+    return str;
+}
+function arrangeDataInStrangeWay(dataList){
+    let str = "";
+    for(i=0; i < dataList.length; i++){
+        str += "<h3>" + (dataList[i].querySelector(".jobTitle")).value + ", " + (dataList[i].querySelector(".companyName")).value + " : (" + (dataList[i].querySelector(".startDate")).value + " - " + (dataList[i].querySelector(".endDate")).value+")</h3>";
         str += "<p class = 'project'>" + (dataList[i].querySelector(".desc")).value + "</p>";
     }
     return str;

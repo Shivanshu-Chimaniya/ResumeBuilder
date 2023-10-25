@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center; 
-    padding: 30px 2%;
+    padding: 10px 2%;
 }
 
 .logo {
